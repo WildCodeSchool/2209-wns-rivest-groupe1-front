@@ -1,38 +1,355 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Gotham;
+  src: url(./fonts/Gotham\ Black\ Regular.ttf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  --main-color: #cc987a;
+  --secondary-color: #111211;
+  --light-grey: #dadada2d;
+  font-family: Gotham;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* HEADER */
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-grey);
+  padding: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img-header img {
+  height: 100px;
+  cursor: pointer;
+}
+
+.header-how, .header-login {
+  background-color: transparent;
+  border: none;
+  color: var(--main-color);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.header-how:hover, .header-login:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.header-signup {
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+.header-signup:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/* FOOTER */
+
+.footer-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grey);
+  padding: 30px;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-logo-wrapper i {
+  border: 1px solid #dadadac2;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+}
+
+.footer-logo-wrapper i:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer-logo-wrapper i:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.footer-btn-wrapper {
+  margin: 20px 0;
+}
+
+.footer-btn-wrapper button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+.footer-btn-wrapper button:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.footer-btn-wrapper button:not(:last-child) {
+  margin-right: 20px;
+}
+
+
+.footer-company-wrapper p {
+  margin: 0;
+  font-size: 14px;
+  color: #9b9b9b;
+}
+
+/* LOGIN */
+
+.login-main-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.login-wrapper {
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-grey);
+  margin: 10px 0 ;
+}
+
+.top-login {
+  font-size: 30px;
+}
+
+.login-form-container {
+  width: 100%;
+}
+
+.login-form-container p {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.login-form-container input {
+  border: none;
+  outline: none;
+}
+
+.login-form-container i {
+  font-size: 13px;
+}
+
+.login-forgot-password-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.login-forgot-password {
+  font-size: 11px;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 90px;
+  color: #fff;
+  border: none;
+  padding: 13px 0;
+  margin: 20px 0;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.signup-social {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.login-social-container {
+  display: flex;
+  align-items: center;
+}
+
+.login-social-container div {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 90px;
 }
 
-.App-link {
-  color: #61dafb;
+.login-social-container div:not(:last-child) {
+  margin-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-social-container .login-icon-google {
+  background-color: #DF4E3D;
+}
+
+.login-social-container .login-icon-facebook {
+  background-color: #3E5A97;
+}
+
+.login-social-container .login-icon-twitter {
+  background-color: #549DE3;
+}
+
+/* REGISTRATION */
+
+.username-input-container, .password-input-container {
+  display: flex;
+  align-items: center;
+}
+
+.username-input-container div, .password-input-container div {
+  margin-right: 15px;
+}
+
+.registration-main-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+
+.registration-wrapper {
+  width: 400px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-grey);
+  margin: 10px 0 ;
+}
+
+.top-registration {
+  font-size: 30px;
+}
+
+.registration-form-container {
+  width: 100%;
+}
+
+.registration-form-container p {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.registration-form-container input {
+  border: none;
+  outline: none;
+}
+
+.registration-form-container i {
+  font-size: 13px;
+}
+
+.registration-forgot-password-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.registration-forgot-password {
+  font-size: 11px;
+}
+
+.registration-btn {
+  width: 100%;
+  background-color: var(--main-color);
+  border-radius: 90px;
+  color: #fff;
+  border: none;
+  padding: 13px 0;
+  margin: 20px 0;
+}
+
+.registration-btn:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.signup-social {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+
+.registration-social-container {
+  display: flex;
+  align-items: center;
+}
+
+.registration-social-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 90px;
+}
+
+.registration-social-container div:not(:last-child) {
+  margin-right: 15px;
+}
+
+.registration-social-container .registration-icon-google {
+  background-color: #DF4E3D;
+}
+
+.registration-social-container .registration-icon-facebook {
+  background-color: #3E5A97;
+}
+
+.registration-social-container .registration-icon-twitter {
+  background-color: #549DE3;
 }
