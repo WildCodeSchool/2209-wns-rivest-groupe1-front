@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link  } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from './assets/logo-removebg-preview.png';
 import Home from './pages/Home';
@@ -13,12 +13,12 @@ function App() {
       <Router>
         <header className="header-wrapper">
           <div className="img-header">
-            <img src={Logo} alt="logo" />
+            <Link to={`/`}><img src={Logo} alt="logo" /></Link>
           </div>
           <div className="header-btn-wrapper">
-            <button className="header-how">How It Works</button>
-            <button className="header-login">Log In</button>
-            <button className="header-signup">Sign Up</button>
+            <Link to={`/userzzz`}><button className="header-how">Profile</button></Link>
+            <Link to={`/login`}><button className="header-login">Log In</button></Link>
+            <Link to={`/registration`}><button className="header-signup">Sign Up</button></Link>
           </div>
         </header>
         <Routes>
