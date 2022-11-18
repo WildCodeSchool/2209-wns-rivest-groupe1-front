@@ -74,7 +74,7 @@ body {
   flex-direction: row;
 }
 
-.footer-logo-wrapper i {
+.footer-logo-wrapper .footer-icon-google, .footer-logo-wrapper .footer-icon-facebook, .footer-logo-wrapper .footer-icon-twitter {
   border: 1px solid #dadadac2;
   border-radius: 100%;
   width: 30px;
@@ -86,11 +86,11 @@ body {
   color: var(--main-color);
 }
 
-.footer-logo-wrapper i:not(:last-child) {
+.footer-logo-wrapper div:not(:last-child) {
   margin-right: 15px;
 }
 
-.footer-logo-wrapper i:hover {
+.footer-logo-wrapper div:hover {
   cursor: pointer;
   opacity: 0.7;
 }

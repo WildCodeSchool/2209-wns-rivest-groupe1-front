@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Route, Routes, Link  } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from './assets/logo-removebg-preview.png';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
 import { UserScreen } from './pages/UserScreen';
 import './App.css';
+import { BsGoogle } from 'react-icons/bs';
+import { FaFacebookF } from 'react-icons/fa';
+import { FiTwitter } from 'react-icons/fi';
 
 function App() {
   return (
@@ -29,10 +31,9 @@ function App() {
         </Routes>
         <footer className="footer-wrapper">
           <div className="footer-logo-wrapper">
-            <FontAwesomeIcon icon="square-instagram" />
-            <FontAwesomeIcon icon="square-snapchat" />
-            <FontAwesomeIcon icon="square-twitter" />
-            <FontAwesomeIcon icon="square-facebook" />
+            <div className="footer-icon-google"><BsGoogle /></div>
+            <div className="footer-icon-facebook"><FaFacebookF /></div>
+            <div className="footer-icon-twitter"><FiTwitter /></div>
           </div>
           <div className="footer-btn-wrapper">
             <button className="footer-home">Home</button>
