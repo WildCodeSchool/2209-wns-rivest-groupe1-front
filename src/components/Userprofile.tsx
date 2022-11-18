@@ -5,7 +5,6 @@ import { Avatar } from './static/Avatar';
 import { Input } from './static/Input';
 import { Label } from './static/Label';
 import { GenericModal } from './static/Modal';
-import { NullValue } from './static/NullValue';
 import { Value } from './static/Value';
 
 interface UserProfileProps {
