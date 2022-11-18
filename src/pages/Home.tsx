@@ -4,8 +4,19 @@ import mostVisitedBlogs from '../fakeData/mostVisitedBlogs.json';
 import mostUsedTags from '../fakeData/mostUsedTags.json';
 import mostUsedCategories from '../fakeData/mostUsedCategories.json';
 import { mostViewedBlogsHeader, mostViewedArticleHeader } from '../staticData/tableHeaders';
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+  // const token = localStorage.getItem("token");
+
+  // const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   if (token === null) {
+  //     navigate("/login");
+  //   }
+  // });
   return (
     <>
       <div className="w-4/5 m-auto mt-10">
